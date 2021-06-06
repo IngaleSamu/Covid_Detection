@@ -90,7 +90,6 @@ if rad=="Predict":
     st.set_option('deprecation.showfileUploaderEncoding', False)
     def import_and_predict(image_data, model):
         size = (224,224)    
-        dic = {0:'Covid Positive', 1:'Normal'}
         t = ImageOps.fit(image_data, size, Image.ANTIALIAS)
         t = img_to_array(t)
         t = np.expand_dims(t,axis=0)
